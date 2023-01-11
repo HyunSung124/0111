@@ -1,0 +1,32 @@
+lest = [5,3,7,2,6,1,8,4]
+# def bubble_sort(target, reverse = False):
+#     if reverse:
+#         for i in range(len(target) - 1):
+#             for j in range(0, len(target) - 1 - i):
+#                 if target[j] > target[j+1]:
+#                     tmp = target[j]
+#                     target[j] = target[j + 1]
+#                     target[j + 1] = tmp
+#     else:
+#         for i in range(len(target) - 1):
+#             for j in range(0, len(target) - 1 - i):
+#                 if target[j] < target[j+1]:
+#                     tmp = target[j]
+#                     target[j] = target[j + 1]
+#                     target[j + 1] = tmp
+# bubble_sort(lest)
+# print(lest)
+
+
+
+def selection_sort(target):
+    for i in range(len(target) - 1):
+        locate = i
+        for j in range(i + 1, len(target)):
+            if target[locate] > target[j]:
+                locate = j
+        tmp = target[i]
+        target[i] = target[locate]
+        target[locate] = tmp
+selection_sort(lest)
+print(lest)
